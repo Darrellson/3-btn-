@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Number Display</title>
+</head>
+<body>
+    <div class="button-container">
+        <button class="button" onclick="displayNumber('left-top', 1)">Display Number 1</button>
+        <button class="button" onclick="displayNumber('right-top', 2)">Display Number 2</button>
+        <button class="button" onclick="displayNumber('right-bottom', 3)">Display Number 3</button>
+    </div>
+
+    <div id="left-top" class="number-display"></div>
+    <div id="right-top" class="number-display"></div>
+    <div id="right-bottom" class="number-display"></div>
+
+    <script>
+        function displayNumber(targetId, number) {
+            const displayElement = document.getElementById(targetId);
+            displayElement.textContent = `Number ${number}`;
+        }
+    </script>
+</body>
+</html>
